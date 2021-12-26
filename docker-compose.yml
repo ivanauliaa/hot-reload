@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+
+  backend:
+    build: ./backend
+    container_name: backend-hot-reload
+    volumes:
+      - ./backend:/backend
+    ports:
+      - 9000:9000
+  
+  server-backend:
+    build: ./server-backend
+    container_name: server-backend-hot-reload
+    volumes:
+      - ./server-backend:/server-backend
